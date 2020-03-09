@@ -19,6 +19,8 @@ class App < Sinatra::Base
   end 
   
   get '/say/:word1/:word2/:word3/:word4/:word5' do 
-    @word = params[:word]
+    @word = params[:word].collect do |w|
+      "#{w + w}"
+    end 
 
 end

@@ -1,4 +1,5 @@
 require_relative 'config/environment'
+require 'pry '
 
 class App < Sinatra::Base
   
@@ -21,6 +22,6 @@ class App < Sinatra::Base
   get '/say/:word1/:word2/:word3/:word4/:word5' do 
     @word = params[:word]
     binding.pry 
-    "#{"
+  end 
 
 end
